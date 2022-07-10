@@ -3,9 +3,13 @@ from pyrogram.types import *
 import json
 import os
 import requests
+import logging
 import subprocess
 from pymongo import MongoClient
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+                    level=logging.INFO)
 
 
 API_ID = os.environ.get("API_ID", None) 
