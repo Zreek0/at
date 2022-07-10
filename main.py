@@ -42,9 +42,9 @@ async def autohentai_parser():
             url1 = data["data"][0]["url"]
             url2 = data["data"][1]["url"]
             url3 = data["data"][2]["url"]
-            file1 = f'{url}-720p.mp4'
-            file2 = f'{url}-480p.mp4'
-            file3 = f'{url}-360p.mp4'
+            file1 = f'@OngoingHentai-{url}-720p.mp4'
+            file2 = f'@OngoingHentai-{url}-480p.mp4'
+            file3 = f'@OngoingHentai-{url}-360p.mp4'
             gay = requests.get(img)
             open('themb.jpg', 'wb').write(gay.content)
             image = 'themb.jpg'
@@ -61,15 +61,15 @@ async def autohentai_parser():
             await app.send_video(CHANNEL_ID,
                                  file1,
                                  thumb=f'{image}',
-                                 caption=f'[{CHANNEL_USERNAME}] {name} - 720p')
+                                 caption=f'**{name} - 720p**\n\n@OngoingHentai')
             await app.send_video(CHANNEL_ID,
                                  file2,
                                  thumb=f'{image}',
-                                 caption=f'[{CHANNEL_USERNAME}] {name} - 480p')
+                                 caption=f'**{name} - 480p**\n\n@OngoingHentai')
             await app.send_video(CHANNEL_ID,
                                  file3,
                                  thumb=f'{image}',
-                                 caption=f'[{CHANNEL_USERNAME}] {name} - 360p')
+                                 caption=f'**{name} - 360p**\n\n@OngoingHentai')
             os.remove(file1)
             os.remove(file2)
             os.remove(file3)
@@ -78,9 +78,9 @@ async def autohentai_parser():
             url1 = data["data"][1]["url"]
             url2 = data["data"][2]["url"]
             url3 = data["data"][3]["url"]
-            file1 = f'{url}-720p.mp4'
-            file2 = f'{url}-480p.mp4'
-            file3 = f'{url}-360p.mp4'
+            file1 = f'@OngoingHentai-{url}-720p.mp4'
+            file2 = f'@OngoingHentai-{url}-480p.mp4'
+            file3 = f'@OngoingHentai-{url}-360p.mp4'
             gay = requests.get(img)
             open('themb.jpg', 'wb').write(gay.content)
             image = 'themb.jpg'
@@ -97,15 +97,15 @@ async def autohentai_parser():
             await app.send_video(CHANNEL_ID,
                                  file1,
                                  thumb=f'{image}',
-                                 caption=f'[{CHANNEL_USERNAME}] {name} - 720p')
+                                 caption=f'**{name} - 720p**\n\n@OngoingHentai')
             await app.send_video(CHANNEL_ID,
                                  file2,
                                  thumb=f'{image}',
-                                 caption=f'[{CHANNEL_USERNAME}] {name} - 480p')
+                                 caption=f'**{name} - 480p**\n\n@OngoingHentai')
             await app.send_video(CHANNEL_ID,
                                  file3,
                                  thumb=f'{image}',
-                                 caption=f'[{CHANNEL_USERNAME}] {name} - 360p')
+                                 caption=f'**{name} - 360p**\n\n@OngoingHentai')
             os.remove(file1)
             os.remove(file2)
             os.remove(file3)
